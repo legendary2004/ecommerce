@@ -1,0 +1,151 @@
+[debug] [2024-03-02T13:23:21.742Z] ----------------------------------------------------------------------
+[debug] [2024-03-02T13:23:21.746Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ACER PREDATOR\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-03-02T13:23:21.746Z] CLI Version:   13.4.0
+[debug] [2024-03-02T13:23:21.747Z] Platform:      win32
+[debug] [2024-03-02T13:23:21.747Z] Node Version:  v21.6.2
+[debug] [2024-03-02T13:23:21.747Z] Time:          Sat Mar 02 2024 14:23:21 GMT+0100 (Central European Standard Time)
+[debug] [2024-03-02T13:23:21.748Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-03-02T13:23:21.838Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-02T13:23:21.839Z] > authorizing via signed-in user (deanmaja6@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\ACER PREDATOR
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-03-02T13:23:29.865Z] Using project from CLI flag: ecommerce-9e9cd
+[debug] [2024-03-02T13:23:29.868Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd [none]
+[debug] [2024-03-02T13:23:30.360Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd 200
+[debug] [2024-03-02T13:23:30.360Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd {"projectId":"ecommerce-9e9cd","projectNumber":"927914467062","displayName":"ecommerce","name":"projects/ecommerce-9e9cd","resources":{"hostingSite":"ecommerce-9e9cd","storageBucket":"ecommerce-9e9cd.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2946d1ab-460a-4248-b4f3-660c69bec857"}
+[info] i  Using project ecommerce-9e9cd (ecommerce) 
+[info] 
+=== Firestore Setup
+[debug] [2024-03-02T13:23:30.372Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/firestore.googleapis.com [none]
+[debug] [2024-03-02T13:23:30.372Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/firestore.googleapis.com x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:31.620Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/firestore.googleapis.com 200
+[debug] [2024-03-02T13:23:31.621Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/firestore.googleapis.com [omitted]
+[debug] [2024-03-02T13:23:31.622Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default) [none]
+[debug] [2024-03-02T13:23:32.846Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default) 200
+[debug] [2024-03-02T13:23:32.846Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default) {"name":"projects/ecommerce-9e9cd/databases/(default)","uid":"c71a8623-a4ee-45dc-b873-7251b5637acd","createTime":"2024-01-19T18:23:08.487671Z","updateTime":"2024-01-19T18:23:08.487671Z","locationId":"nam5","type":"FIRESTORE_NATIVE","concurrencyMode":"PESSIMISTIC","versionRetentionPeriod":"3600s","earliestVersionTime":"2024-03-02T12:23:33.142792Z","appEngineIntegrationMode":"DISABLED","keyPrefix":"s","pointInTimeRecoveryEnablement":"POINT_IN_TIME_RECOVERY_DISABLED","deleteProtectionState":"DELETE_PROTECTION_DISABLED","etag":"INTUtLHW1YQDMMSYicnv0YQD"}
+[debug] [2024-03-02T13:23:32.847Z] database_type: FIRESTORE_NATIVE
+[debug] [2024-03-02T13:23:32.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-02T13:23:32.848Z] > authorizing via signed-in user (deanmaja6@gmail.com)
+[debug] [2024-03-02T13:23:32.849Z] [iam] checking project ecommerce-9e9cd for permissions ["firebase.projects.get"]
+[debug] [2024-03-02T13:23:32.850Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions [none]
+[debug] [2024-03-02T13:23:32.850Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:32.851Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-02T13:23:33.286Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions 200
+[debug] [2024-03-02T13:23:33.287Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[info] 
+[info] Firestore Security Rules allow you to define how and when to allow
+[info] requests. You can keep these rules in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-02T13:23:46.992Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/releases pageSize=10&pageToken=
+[debug] [2024-03-02T13:23:47.376Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/releases 200
+[debug] [2024-03-02T13:23:47.377Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/releases {"releases":[{"name":"projects/ecommerce-9e9cd/releases/cloud.firestore","rulesetName":"projects/ecommerce-9e9cd/rulesets/9d930c6f-6ee0-4ae2-b4b4-e4150b131db4","createTime":"2024-01-19T18:23:15.034102Z","updateTime":"2024-01-19T18:24:46.379863Z"},{"name":"projects/ecommerce-9e9cd/releases/firebase.storage/ecommerce-9e9cd.appspot.com","rulesetName":"projects/ecommerce-9e9cd/rulesets/4e5a310b-dc68-42e5-813c-0fca36aa86fd","createTime":"2024-01-19T18:24:19.708862Z","updateTime":"2024-01-19T18:24:35.437352Z"}]}
+[debug] [2024-03-02T13:23:47.378Z] Found ruleset: projects/ecommerce-9e9cd/rulesets/9d930c6f-6ee0-4ae2-b4b4-e4150b131db4
+[debug] [2024-03-02T13:23:47.379Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/rulesets/9d930c6f-6ee0-4ae2-b4b4-e4150b131db4 [none]
+[debug] [2024-03-02T13:23:47.611Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/rulesets/9d930c6f-6ee0-4ae2-b4b4-e4150b131db4 200
+[debug] [2024-03-02T13:23:47.612Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/ecommerce-9e9cd/rulesets/9d930c6f-6ee0-4ae2-b4b4-e4150b131db4 [omitted]
+[info] 
+[info] Firestore indexes allow you to perform complex queries while
+[info] maintaining performance that scales with the size of the result
+[info] set. You can keep index definitions in your project directory
+[info] and publish them with firebase deploy.
+[info] 
+[debug] [2024-03-02T13:23:51.707Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-03-02T13:23:51.710Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-03-02T13:23:52.739Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-03-02T13:23:52.739Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-03-02T13:23:52.777Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-03-02T13:23:52.777Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/ecommerce-9e9cd/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/ecommerce-9e9cd/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] 
+=== Functions Setup
+[debug] [2024-03-02T13:23:52.779Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-03-02T13:23:52.780Z] > authorizing via signed-in user (deanmaja6@gmail.com)
+[debug] [2024-03-02T13:23:52.780Z] [iam] checking project ecommerce-9e9cd for permissions ["firebase.projects.get"]
+[debug] [2024-03-02T13:23:52.780Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions [none]
+[debug] [2024-03-02T13:23:52.780Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:52.780Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-02T13:23:53.679Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions 200
+[debug] [2024-03-02T13:23:53.679Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecommerce-9e9cd:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-03-02T13:23:53.682Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-03-02T13:23:53.682Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:53.691Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/runtimeconfig.googleapis.com [none]
+[debug] [2024-03-02T13:23:53.691Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:54.761Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/runtimeconfig.googleapis.com 200
+[debug] [2024-03-02T13:23:54.762Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2024-03-02T13:23:54.794Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com 200
+[debug] [2024-03-02T13:23:54.794Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com [omitted]
+[debug] [2024-03-02T13:23:54.796Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com:enable [none]
+[debug] [2024-03-02T13:23:54.796Z] >>> [apiv2][(partial)header] POST https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com:enable x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:23:56.411Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com:enable 200
+[debug] [2024-03-02T13:23:56.411Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com:enable [omitted]
+[debug] [2024-03-02T13:24:06.414Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com [none]
+[debug] [2024-03-02T13:24:06.415Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/ecommerce-9e9cd
+[debug] [2024-03-02T13:24:07.540Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com 200
+[debug] [2024-03-02T13:24:07.541Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/ecommerce-9e9cd/services/cloudfunctions.googleapis.com [omitted]
+[info] Let's create a new codebase for your functions.
+[info] A directory corresponding to the codebase will be created in your project
+[info] with sample code pre-configured.
+
+[info] See https://firebase.google.com/docs/functions/organize-functions for
+[info] more information on organizing your functions using codebases.
+
+[info] Functions can be deployed with firebase deploy.
+
+[info] +  Wrote functions/package.json 
+[info] +  Wrote functions/.eslintrc.js 
+[info] +  Wrote functions/index.js 
+[info] +  Wrote functions/.gitignore 
+[info] 
+=== Hosting Setup
+[debug] [2024-03-02T13:25:23.495Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd [none]
+[debug] [2024-03-02T13:25:23.812Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd 200
+[debug] [2024-03-02T13:25:23.812Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecommerce-9e9cd {"projectId":"ecommerce-9e9cd","projectNumber":"927914467062","displayName":"ecommerce","name":"projects/ecommerce-9e9cd","resources":{"hostingSite":"ecommerce-9e9cd","storageBucket":"ecommerce-9e9cd.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_2946d1ab-460a-4248-b4f3-660c69bec857"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote public/404.html 
+[debug] [2024-03-02T13:26:00.659Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-03-02T13:26:00.900Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-03-02T13:26:00.900Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.8.1","browserURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.8.1/firebase.tgz"},"live":{"version":"10.8","browserURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.8/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.8.1/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.8.1/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.8.1/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.8.1/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.8.1/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.8.1/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.8.1/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.8.1/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.8.1/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at C:\Users\ACER PREDATOR\Desktop\firebase-ecommerce 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=279374212&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-03-02T13:26:33.569Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-03-02T13:26:33.569Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-03-02T13:26:33.937Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-03-02T13:26:33.937Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-03-02T13:26:33.956Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-03-02T13:26:34.351Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-03-02T13:26:34.351Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"legendary2004","id":114931178,"node_id":"U_kgDOBtm16g","avatar_url":"https://avatars.githubusercontent.com/u/114931178?v=4","gravatar_id":"","url":"https://api.github.com/users/legendary2004","html_url":"https://github.com/legendary2004","followers_url":"https://api.github.com/users/legendary2004/followers","following_url":"https://api.github.com/users/legendary2004/following{/other_user}","gists_url":"https://api.github.com/users/legendary2004/gists{/gist_id}","starred_url":"https://api.github.com/users/legendary2004/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/legendary2004/subscriptions","organizations_url":"https://api.github.com/users/legendary2004/orgs","repos_url":"https://api.github.com/users/legendary2004/repos","events_url":"https://api.github.com/users/legendary2004/events{/privacy}","received_events_url":"https://api.github.com/users/legendary2004/received_events","type":"User","site_admin":false,"name":"Dean Maja","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":null,"twitter_username":null,"public_repos":9,"public_gists":0,"followers":0,"following":1,"created_at":"2022-10-03T13:51:41Z","updated_at":"2023-12-01T14:03:46Z","private_gists":0,"total_private_repos":1,"owned_private_repos":1,"disk_usage":40004,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as legendary2004 
+[info] 
