@@ -1,0 +1,29 @@
+@media screen and (max-width: 900px) {
+  .set-auth-width {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .flex-dir {
+    flex-direction: row !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact-dir {
+    flex-direction: column !important;
+  }
+
+  .contact-width {
+    width: 100% !important
+  }
+}
+
+.auth-height {
+  min-height: calc(100vh - 100px);
+}
+
+.no-arrow {
+  background-image: none !important;
+}
