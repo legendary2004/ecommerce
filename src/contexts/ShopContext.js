@@ -45,7 +45,7 @@ export default function ShopContextProvider({children}) {
         return () => {
             unsub()
         }
-    }, [])
+    }, [category.category])
 
     function handleProductChange(a, b) {
         const arrayLength = Math.ceil(a.length / 9)
@@ -155,6 +155,10 @@ export default function ShopContextProvider({children}) {
                     currentPage: action.info.label
                 }
             })
+        }
+        else if (action.type == 'clear') {
+            setPriceRange({minPrice: '', maxPrice: ''})
+            setConfirmPriceRange({minPrice: '', maxPrice: ''})
         }
     }
 

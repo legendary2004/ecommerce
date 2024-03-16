@@ -48,10 +48,22 @@ export default function(prop) {
                 else if (e.target.innerHTML == 'Edit category') {
                     setMsg("Category edited")
                     await getDoc(doc(db, "categories", category.category.value.id))
-                    .then(res => {
+                    .then(async res => {
                         const array = res.data();
                         array.name = capName;
-                        setDoc(doc(db, "categories", array.id), array)
+                        const products = await getDocs(collection(db, "products"))
+                        const emptyArray = []
+                        products.forEach(item => {
+                            emptyArray.push(item.data())
+                        })
+                        emptyArray.map(async item => {
+                            if (item.category == category.category.value.name) {
+                                item.category = capName
+                                await setDoc(doc(db, "products", item.id), item)
+                            }
+                        })
+                        await setDoc(doc(db, "categories", array.id), array)
+
                     })
                 }
                 else if (e.target.innerHTML == 'Add new tag') {

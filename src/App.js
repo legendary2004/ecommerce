@@ -10,6 +10,7 @@ import { initFlowbite } from 'flowbite';
 import SinglePage from './pages/SinglePage';
 import ProductForm from './pages/ProductForm';
 import ManageStore from './pages/ManageStore';
+import Checkout from './pages/Checkout';
 
 function App() {
   setTimeout(() => {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/single' element={<SinglePage />}/>
         <Route path="/productForm" element={<ProductForm />} />
         <Route path="/manageStore" element={<ManageStore />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </BrowserRouter>
   );

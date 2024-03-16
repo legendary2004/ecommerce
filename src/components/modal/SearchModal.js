@@ -109,7 +109,7 @@ export default function() {
                     
                         <div className="p-4 md:p-5 space-y-4">
                             <InputGroup value={product} handleChange={(e) => setProduct(e.target.value)} handleClick={() => confirmSearch(products)}/>
-                            <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">Or filter products based on the tags</h3>
+                            <h3 className="mb-5 text-lg font-medium text-gray-900 dark:text-white">Or filter products based on the tags</h3>
                             <ul className="flex items-center flex-wrap w-full space-x-2">
                                 {tags.map((item, index) => {
                                     return <SearchCheckbox id={item.id} name={item.name} isChecked={item.isChecked} handleChange={handleCheckChanges}/>

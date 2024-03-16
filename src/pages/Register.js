@@ -69,6 +69,9 @@ export default function() {
                         email: profile.mail,
                         photoURL: imageURL,
                     })
+                    await setDoc(doc(db, "cart", res.user.uid), {
+                        cart: []
+                    })
                 })
             }
         }

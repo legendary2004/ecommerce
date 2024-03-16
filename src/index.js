@@ -10,6 +10,7 @@ import GetProductProvider from './contexts/GetProduct';
 import ShopContextProvider from './contexts/ShopContext';
 import ShoppingContextProvider from './contexts/CategoryToShop';
 import ProductOverviewContextProvider from './contexts/ProductToShop';
+import CartContextProvider from './contexts/CartContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,7 +21,9 @@ root.render(
           <ProductContextProvider>
             <ShopContextProvider>
               <ProductOverviewContextProvider>
-                <App />
+                <CartContextProvider>
+                  <App />
+                </CartContextProvider>
               </ProductOverviewContextProvider>
             </ShopContextProvider>
           </ProductContextProvider>

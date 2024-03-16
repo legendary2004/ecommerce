@@ -10,11 +10,17 @@ import { useNavigate } from "react-router-dom";
 import { ShopContext } from "../contexts/ShopContext";
 import Pagination from "../components/navbar/Pagination";
 import { ProductOverviewContext } from "../contexts/ProductToShop";
+import { doc, getDoc, setDoc } from "firebase/firestore";
+import { db } from "../firebase";
+import { UserContext } from "../contexts/AuthContext";
+import { CartContext } from "../contexts/CartContext";
+import AuthModal from "../components/modal/AuthModal";
 
 export default function() {
   const navigate = useNavigate()
   const category = useContext(ShopContext)
   const product = useContext(ProductOverviewContext)
+  const cart = useContext(CartContext)
   const [state, setState] = useState({})
   setTimeout(() => {
     initFlowbite()
@@ -48,7 +54,7 @@ export default function() {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center gap-2 mt-2">
                     {state.products.length > 0 && state.products[state.currentPage - 1].map(item => {
-                      return <Card key={item.id} name={item.name} price={item.price} img={item.image} handleClick={() => productOverview(item.id)}/>
+                      return <Card key={item.id} name={item.name} price={item.price} img={item.image} handleClick={() => productOverview(item.id)} addToCart={() => cart.dispatch({type: 'addProduct', info: {id: item.id}})}/>
                     })}
                   </div>
               </div>
@@ -60,6 +66,7 @@ export default function() {
                 </div>
               </div>
           </div>}
+          {cart.msg && <AuthModal msg={cart.msg} closeModal={() => cart.dispatch({type: 'closeModal'})} />}
         <Footer />
       </div>
 
