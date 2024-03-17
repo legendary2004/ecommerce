@@ -6,10 +6,8 @@ import FloatingInput from "../components/inputs/FloatingInput";
 import Textarea from "../components/inputs/Textarea";
 import MainNav from "../components/navbar/MainNav";
 import { useEffect, useRef, useState } from "react";
-import AuthModal from "../components/modal/AuthModal";
 
 export default function() {
-    const [msg, setMsg] = useState("");
     const [helpForm, setHelpForm] = useState({email: "", code: "", text: ""});
     setTimeout(() => {
         initFlowbite()
@@ -26,19 +24,6 @@ export default function() {
         })
     }
 
-    function submitHelpForm(e) {
-        if (!helpForm.email) setMsg("Invalid email")
-        else if (!helpForm.code) setMsg("The product code is missing")
-        else if (!helpForm.text) setMsg("Text is missing")
-        else {
-            try {
-                e.preventDefault()
-            }
-            catch(err) {
-                console.log(err)
-            }
-        }
-    }
     return (
         <div className="h-screen">
             <MainNav />
@@ -49,7 +34,7 @@ export default function() {
                         <FloatingInput id="email" value={helpForm.email} handleChange={handleHelpFormChange} type="email" label="Your email" placeholder="Email"/>
                         <FloatingInput id="code" value={helpForm.code} handleChange={handleHelpFormChange} type="text" label="Product code" placeholder="Product code"/>
                         <Textarea id="text" value={helpForm.text} handleChange={handleHelpFormChange} placeholder="Enter message" />
-                        <FormButton button="Send" handleClick={submitHelpForm}/>
+                        <FormButton button="Send" />
                     </div>
                 </div>
                 <div className="w-1/2 p-6 contact-width">
@@ -62,7 +47,7 @@ export default function() {
                     </div>
                 </div>
             </div>
-            {msg && <AuthModal msg={msg} closeModal={() => setMsg("")} />}
+    
             <Footer />
         </div>
     )

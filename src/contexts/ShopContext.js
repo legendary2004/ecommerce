@@ -15,8 +15,10 @@ export default function ShopContextProvider({children}) {
     const [reducer, dispatch] = useReducer(handleFilter, "");
 
     useEffect(() => {
-        setState(category.category);
-        setFiltered(category.category)
+        if (Object.hasOwn(category.category, 'name')) {
+            setState(category.category)
+            setFiltered(category.category)
+        }
     }, [category])
 
     useEffect(() => {
@@ -122,32 +124,6 @@ export default function ShopContextProvider({children}) {
     }
 
     function handleFilter(current, action) {
-        // const currentState = {...action.info.state}
-        // const allProducts = [];
-        // if (currentState.products) currentState.products.map(item => allProducts.push(...item));
-        // if (action.type == "sortByPrice") {
-        //     const {minPrice, maxPrice} = priceRange
-        //     if (!minPrice && !maxPrice) setMsg("Set a min or max price")
-        //     else if (maxPrice <= minPrice) setMsg("Max price cannot be lower than min price")
-        //     else {
-        //         setMsg("")
-        //         const products = allProducts.filter(a => a.price >= minPrice && a.price <= maxPrice)
-        //         currentState.currentPage = 1
-        //         const res = handleProductChange(products, currentState)
-        //         setFiltered (res)
-        //     }
-        // }
-        // else if (action.type == 'orderProducts') {
-        //     let sortedState = []
-        //     checkState[1].array.map(item => {
-        //         if (item.isChecked) sortedState = item.sort(allProducts)
-        //     })
-        //     const res = handleProductChange(sortedState, currentState)
-        //     setFiltered(res)
-        // }
-        // else if (action.type == 'clear') {
-        //     setCurrentState(state)
-        // }
         if (action.type == 'changePage') {
             setFiltered(prevVal => {
                 return {
@@ -163,7 +139,8 @@ export default function ShopContextProvider({children}) {
     }
 
     useEffect(() => {
-        if (state.products) {
+        console.log(state)
+        if (Object.hasOwn(state, 'products')) {
             const allProducts = []
             state.products.map(item => allProducts.push(...item))
             const res = orderProducts(allProducts, state)
